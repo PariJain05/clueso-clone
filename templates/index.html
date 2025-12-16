@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clueso Clone</title>
+  </head>
+  <body>
+    <h2>Upload Screen Recording</h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="video" required />
+      <button type="submit">Generate Steps</button>
+    </form>
+
+    {% if steps %}
+    <h3>Generated Documentation</h3>
+    <pre>{{ steps }}</pre>
+    {% endif %}
+  </body>
+</html>
